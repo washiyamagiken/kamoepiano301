@@ -1,0 +1,194 @@
+//------------------------------------------------------------------------------------------------------------------------------------------------
+// kamoepiano301.sfz Definition File
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+<control>
+default_path=./samples/
+
+#define $cv7_lu 45
+#define $cv7_ml 46
+#define $cv7_mu 104
+#define $cv7_hl 105
+
+#define $cv8_lu 10
+#define $cv8_ml 11
+#define $cv8_mu 104
+#define $cv8_hl 105
+
+#define $cv9_lu 45
+#define $cv9_ml 46
+#define $cv9_mu 104
+#define $cv9_hl 105
+
+#define $cv10_lu 45
+#define $cv10_ml 46
+#define $cv10_mu 86
+#define $cv10_hl 87
+
+<curve>curve_index=7
+v0=0
+v$cv7_lu=1
+v$cv7_ml=0
+v$cv7_mu=1
+v$cv7_hl=0
+v127=1
+
+<curve>curve_index=8
+v0=0
+v$cv8_lu=1
+v$cv8_ml=0
+v$cv8_mu=1
+v$cv8_hl=0
+v127=1
+
+<curve>curve_index=9
+v0=0
+v$cv9_lu=1
+v$cv9_ml=0
+v$cv9_mu=1
+v$cv9_hl=0
+v127=1
+
+<curve>curve_index=10
+v0=0
+v$cv10_lu=1
+v$cv10_ml=0
+v$cv10_mu=1
+v$cv10_hl=0
+v127=1
+
+<curve>curve_index=11
+v000=0
+v032=0
+v042=.1
+v064=.3
+v072=.4
+v073=1
+v127=1
+
+<global>
+
+amp_veltrack=100
+ampeg_attack=0.015999969
+ampeg_vel2attack=-0.0135
+ampeg_decay=80.0
+ampeg_sustain=0.00000001
+cutoff_curvecc131=7
+
+//Sustain
+sustain_cc=90
+ampeg_dynamic=1
+ampeg_release=.6
+ampeg_release_shape=-6
+ampeg_releasecc64=80
+ampeg_release_curvecc64=11
+
+<group> //Group p
+ hivel=$cv7_lu
+ volume=6
+ cutoff=500
+ cutoff_oncc131=2400
+
+<region> sample=p_a0.wav	key=a0	hikey=b0	tune=-10    volume=11	pan=-13 lokey=c-2
+<region> sample=p_c1.wav	key=c1	hikey=d1	tune=-9     volume=9  pan=-14 
+<region> sample=p_d#1.wav	key=d#1	hikey=f1	tune=9      volume=9    pan=-15 
+<region> sample=p_f#1.wav	key=f#1	hikey=g#1	tune=2      volume=9    pan=-15 
+<region> sample=p_a1.wav	key=a1	hikey=b1	tune=0      volume=8.5  pan=-16 
+<region> sample=p_c2.wav	key=c2	hikey=d2	tune=0      volume=5.5  pan=-18 
+<region> sample=p_d#2.wav	key=d#2	hikey=f2	tune=3      volume=5.5  pan=-18 hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_f#2.wav	key=f#2	hikey=g#2	tune=1      volume=7.5  pan=-22 hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_a2.wav	key=a2	hikey=b2	tune=1      volume=7    pan=-22 hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_c3.wav	key=c3	hikey=d3	tune=0      volume=7    hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_d#3.wav	key=d#3	hikey=f3	tune=0      volume=9    hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_f#3.wav	key=f#3	hikey=g#3	tune=0      volume=9    hivel=$cv10_lu  cutoff_oncc131=1400 cutoff_curvecc131=10
+<region> sample=p_lc_a3.wav	key=a3	hikey=b3	tune=5      volume=12.5 offset=450   hivel=$cv10_lu  cutoff_oncc131=2000 cutoff_curvecc131=10
+<region> sample=p_c4.wav	key=c4	hikey=d4	tune=1      volume=6.5  hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_d#4.wav	key=d#4	hikey=f4	tune=2      volume=10.0
+<region> sample=p_lc_f#4.wav	key=f#4	hikey=g#4	tune=3      hivel=$cv9_lu volume=8.5   cutoff_oncc131=1600 cutoff_curvecc131=9 ampeg_decay=45.
+<region> sample=p_lc_a4.wav	key=a4	hikey=b4    tune=0      hivel=$cv9_lu volume=8.5   cutoff_oncc131=1600 cutoff_curvecc131=9   ampeg_decay=45.0
+<region> sample=p_lc_c5.wav	key=c5	hikey=d5    tune=2       volume=6.5   cutoff_oncc131=1700 
+<region> sample=p_d#5.wav	key=d#5	hikey=f5    tune=3      volume=6.5   cutoff_oncc131=1800 
+<region> sample=p_lc_f#5.wav	key=f#5	hikey=g#5   tune=5      volume=9.5          hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_a5.wav	key=a5	hikey=b5    tune=1                      hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_c6.wav	key=c6	hikey=d6    tune=5                      hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_d#6.wav	key=d#6	hikey=f6    tune=0                      hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_f#6.wav	key=f#6	hikey=g#6   tune=5      loop_mode=one_shot  hivel=$cv10_lu  cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=p_lc_a6.wav	key=a6	hikey=b6    tune=7      loop_mode=one_shot
+<region> sample=p_lc_c7.wav	key=c7	hikey=d7	tune=7      hivel=$cv8_lu                    cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=p_d#7.wav	key=d#7	hikey=f7	tune=0      hivel=$cv8_lu    volume=-1       cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=p_f#7.wav	key=f#7	hikey=g#7	tune=5      hivel=$cv8_lu                    cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=p_a7.wav	key=a7	hikey=b7	tune=0      hivel=$cv8_lu                    cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=p_c8.wav	key=c8	hikey=g8	tune=0      hivel=$cv8_lu    volume=-2	    cutoff_curvecc131=8 loop_mode=one_shot
+
+<group> // mf
+ lovel=$cv7_ml hivel=$cv7_mu
+ volume=6
+ cutoff_oncc131=2600
+
+<region> sample=mf_a0.wav	    key=a0	hikey=b0	cutoff=700 volume=14	tune=-10  pan=-13  lokey=c-2  
+<region> sample=mf_c1.wav	    key=c1	hikey=d1	cutoff=650 volume=13.5  tune=-9   pan=-14        
+<region> sample=mf_d#1.wav	    key=d#1	hikey=f1	cutoff=600 volume=8.5   tune=9    pan=-15       
+<region> sample=mf_f#1.wav	    key=f#1	hikey=g#1	cutoff=600 volume=9     tune=2    pan=-15         
+<region> sample=mf_a1.wav	    key=a1	hikey=b1	cutoff=800 volume=7.5   tune=0    pan=-16         
+<region> sample=mf_c2.wav	    key=c2	hikey=d2	cutoff=900 volume=7.5   tune=0    pan=-18  cutoff_oncc131=2200
+<region> sample=mf_d#2.wav	    key=d#2	hikey=f2	cutoff=750 volume=7     tune=3    pan=-18              lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=2400 cutoff_curvecc131=10            
+<region> sample=mf_f#2.wav	    key=f#2	hikey=g#2	cutoff=900 volume=7.5   tune=1    pan=-22              lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=2400 cutoff_curvecc131=10                        
+<region> sample=mf_a2.wav	    key=a2	hikey=b2	cutoff=900 volume=8     tune=1    pan=-22  offset=300      lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=2400 cutoff_curvecc131=10                      
+<region> sample=mf_c3.wav	    key=c3	hikey=d3	cutoff=700 volume=6.0   tune=0                  lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=mf_lc_d#3.wav	key=d#3	hikey=f3	cutoff=800 volume=8.0   tune=0                  lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=2400 cutoff_curvecc131=10
+<region> sample=mf_lc_f#3.wav	key=f#3	hikey=g#3	cutoff=1000 volume=7.5  tune=0                lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1800 cutoff_curvecc131=10                  
+<region> sample=mf_lc_a3.wav	key=a3	hikey=b3	cutoff=950 volume=8.5	tune=5   offset=250     lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1600 cutoff_curvecc131=10                    
+<region> sample=mf_c4.wav	    key=c4	hikey=d4    cutoff=1000             tune=1                 lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1800 cutoff_curvecc131=10                      
+<region> sample=mf_d#4.wav	    key=d#4	hikey=f4	cutoff=900 volume=7.0   tune=2   offset=50                          cutoff_oncc131=2800
+<region> sample=mf_lc_f#4.wav	key=f#4	hikey=g#4	cutoff=1000 volume=6.5  tune=3   offset=250     lovel=$cv9_ml hivel=$cv9_mu  cutoff_oncc131=2400 cutoff_curvecc131=9 ampeg_decay=45.
+<region> sample=mf_a4.wav	    key=a4	hikey=b4    cutoff=1000             tune=0   offset=50           lovel=$cv9_ml hivel=$cv9_mu  cutoff_oncc131=2400 cutoff_curvecc131=9    ampeg_decay=45.0
+<region> sample=mf_c5.wav	    key=c5	hikey=d5    cutoff=960              tune=2   offset=50                               cutoff_oncc131=2400
+<region> sample=mf_d#5.wav	    key=d#5	hikey=f5    cutoff=960              tune=3   offset=50                               cutoff_oncc131=2800
+<region> sample=mf_f#5.wav	    key=f#5	hikey=g#5	cutoff=1100  offset=50  tune=5                          lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1500 cutoff_curvecc131=10
+<region> sample=mf_a5.wav	    key=a5	hikey=b5	cutoff=1100  offset=50  tune=1                          lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1500 cutoff_curvecc131=10  
+<region> sample=mf_lc_c6.wav	    key=c6	hikey=d6	cutoff=1200 volume=8    tune=5                          lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1500 cutoff_curvecc131=10
+<region> sample=mf_lc_d#6.wav	    key=d#6	hikey=f6	cutoff=1300             tune=0                          lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1500 cutoff_curvecc131=10  
+<region> sample=mf_lc_f#6.wav	    key=f#6	hikey=g#6	cutoff=2000             tune=5   loop_mode=one_shot    lovel=$cv10_ml hivel=$cv10_mu   cutoff_oncc131=1500 cutoff_curvecc131=10
+<region> sample=mf_a6.wav	    key=a6	hikey=b6    cutoff=2200             tune=7   offset=80 loop_mode=one_shot
+<region> sample=mf_c7.wav	    key=c7	hikey=d7	cutoff=1800			    tune=7                  lovel=$cv8_ml hivel=$cv8_mu             cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=mf_d#7.wav	    key=d#7	hikey=f7	cutoff=2200			    tune=0                  lovel=$cv8_ml hivel=$cv8_mu             cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=mf_f#7.wav	    key=f#7	hikey=g#7	cutoff=2200			    tune=5                  lovel=$cv8_ml hivel=$cv8_mu             cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=mf_a7.wav	    key=a7	hikey=b7	cutoff=2200 volume=8	tune=0                 lovel=$cv8_ml hivel=$cv8_mu             cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=mf_c8.wav	    key=c8	hikey=g8	cutoff=2200 volume=0	tune=0                  lovel=$cv8_ml hivel=$cv8_mu             cutoff_curvecc131=8 loop_mode=one_shot
+
+<group> // f
+ lovel=$cv7_hl
+ volume=6
+ cutoff_oncc131=2400
+
+<region> sample=f_a0.wav	key=a0	hikey=b0	    tune=-10    cutoff=900	volume=8            pan=-13	lokey=c-2    cutoff_oncc131=1800
+<region> sample=f_c1.wav	key=c1	hikey=d1	    tune=-9     cutoff=1100	volume=9            pan=-14                                 cutoff_oncc131=1800               
+<region> sample=f_hb_d#1.wav	key=d#1	hikey=f1	tune=9      cutoff=1250	volume=8            pan=-15
+<region> sample=f_f#1.wav	key=f#1	hikey=g#1	    tune=2      cutoff=1800	volume=8                pan=-15             
+<region> sample=f_a1.wav	key=a1	hikey=b1	    tune=0      cutoff=1700	volume=7.5              pan=-16                                cutoff_oncc131=1700              
+<region> sample=f_c2.wav	key=c2	hikey=d2	    tune=0      cutoff=2200	volume=7.5              pan=-18                                 cutoff_oncc131=1600
+<region> sample=f_lc_d#2.wav	key=d#2	hikey=f2	tune=3      cutoff=1800	volume=7.2          pan=-18	                lovel=$cv10_hl  cutoff_oncc131=4400   cutoff_curvecc131=10
+<region> sample=f_f#2.wav	key=f#2	hikey=g#2	    tune=1      cutoff=1700	volume=7.5  offset=250  pan=-22      lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10                
+<region> sample=f_hc_a2.wav	key=a2	hikey=b2	    tune=1      cutoff=1900	volume=7                pan=-22                lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10
+<region> sample=f_hc_c3.wav	key=c3	hikey=d3	    tune=0      cutoff=2050	volume=6    offset=150      lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10
+<region> sample=f_lc_d#3.wav	key=d#3	hikey=f3	tune=0      cutoff=2050	volume=6                    lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10
+<region> sample=f_lc_f#3.wav	key=f#3	hikey=g#3	tune=0      cutoff=2100	volume=7	offset=350      lovel=$cv10_hl  cutoff_oncc131=2800   cutoff_curvecc131=10                  
+<region> sample=f_lc_a3.wav	key=a3	hikey=b3	    tune=5      cutoff=2200	volume=6.5                  lovel=$cv10_hl  cutoff_oncc131=2200   cutoff_curvecc131=10            
+<region> sample=f_c4.wav	key=c4	hikey=d4	    tune=1      cutoff=2400	volume=5.5  offset=50       lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10            
+<region> sample=f_d#4.wav	key=d#4	hikey=f4	    tune=2      cutoff=3000	volume=5.5
+<region> sample=f_lc_f#4.wav	key=f#4	hikey=g#4	    tune=3      cutoff=3200	volume=6.0  offset=500      lovel=$cv9_hl                       cutoff_curvecc131=9 ampeg_decay=45.
+<region> sample=f_a4.wav	key=a4	hikey=b4	    tune=0      cutoff=3200	                            lovel=$cv9_hl                       cutoff_curvecc131=9 ampeg_decay=45.0
+<region> sample=f_c5.wav	key=c5	hikey=d5	    tune=2      cutoff=3000		
+<region> sample=f_d#5.wav	key=d#5	hikey=f5	    tune=3      cutoff=3300	    offset=250
+<region> sample=f_f#5.wav	key=f#5	hikey=g#5	    tune=5      cutoff=2000		offset=250              lovel=$cv10_hl  cutoff_oncc131=2100   cutoff_curvecc131=10
+<region> sample=f_a5.wav	key=a5	hikey=b5	    tune=1      cutoff=2400		offset=150              lovel=$cv10_hl  cutoff_oncc131=2200   cutoff_curvecc131=10
+<region> sample=f_c6.wav	key=c6	hikey=d6	    tune=5      cutoff=2500	                            lovel=$cv10_hl  cutoff_oncc131=2200   cutoff_curvecc131=10
+<region> sample=f_lc_d#6.wav	key=d#6	hikey=f6	tune=0      cutoff=2400	    offset=350              lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10
+<region> sample=f_f#6.wav	key=f#6	hikey=g#6	    tune=5      cutoff=2500	 loop_mode=one_shot         lovel=$cv10_hl  cutoff_oncc131=2400   cutoff_curvecc131=10
+<region> sample=f_a6.wav	key=a6	hikey=b6	    tune=7      cutoff=3200	 loop_mode=one_shot
+<region> sample=f_c7.wav	key=c7	hikey=d7	    tune=7      cutoff=3200	                            lovel=$cv8_hl                       cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=f_d#7.wav	key=d#7	hikey=f7        tune=0      cutoff=3000	                            lovel=$cv8_hl                       cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=f_f#7.wav	key=f#7	hikey=g#7       tune=5      cutoff=2500	                            lovel=$cv8_hl                       cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=f_a7.wav	key=a7	hikey=b7        tune=0      cutoff=3000	                            lovel=$cv8_hl                       cutoff_curvecc131=8 loop_mode=one_shot
+<region> sample=f_c8.wav	key=c8	hikey=g8	    tune=0      cutoff=6000	                            lovel=$cv8_hl                       cutoff_curvecc131=8 loop_mode=one_shot
+
